@@ -1,15 +1,17 @@
 package controllers;
 
-import java.util.List;
+import play.*;
+import play.mvc.*;
 
-import models.Trajet;
-import play.mvc.Controller;
+import java.util.*;
+
+import models.*;
 
 public class Trajets extends Controller {
 
-	public void index(){
+    public static void index() {
 		List<Trajet> trajetsDisponibles = Trajet.findAll();
 		render(trajetsDisponibles);
-	}
-	
+    }
+
 }

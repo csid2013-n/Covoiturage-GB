@@ -3,9 +3,9 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+GET     /                                       Trajets.index
 
-GET     /Trajets                                Trajets.index
+GET     /Trajets                                Trajets.getAllTrajets
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
