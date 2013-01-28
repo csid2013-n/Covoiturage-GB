@@ -1,16 +1,11 @@
 #{extends 'main.html' /}
 #{set title:'Liste des trajets' /}
 
-
 <table>
-	<tr>
-		<td>D&eacute;part</td>
-		<td>Arriv&eacute;e</td>
-	</tr>
 #{list items:trajetsDisponibles, as:'trajet'}
     <tr>
     	<td>${trajet.VilleDepart}</td>
-    	<td>${trajet.VilleArrive}</td>
+    	<td>${trajet.VilleArrivee}</td>
     </tr>
-#{/list}
+#{/li}
 </table>

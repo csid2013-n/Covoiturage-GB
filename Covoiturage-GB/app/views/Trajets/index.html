@@ -1,11 +1,23 @@
 #{extends 'main.html' /}
 #{set title:'Liste des trajets' /}
 
+
 <table>
+	<tr>
+		<th>Date</th>
+		<th>D&eacute;part</th>
+		<th>Arriv&eacute;e</th>
+		<th>Conducteur</th>
+	</tr>
 #{list items:trajetsDisponibles, as:'trajet'}
     <tr>
+    	<td>${trajet.dateDepart}</td>
     	<td>${trajet.VilleDepart}</td>
-    	<td>${trajet.VilleArrivee}</td>
+    	<td>${trajet.VilleArrive}</td>
+    	<td>${trajet.Conducteur.nom + " " +trajet.Conducteur.prenom}</td>
     </tr>
-#{/li}
+#{/list}
+	<tr>
+		<td colspan="3">Total = ${trajetsDisponibles.size}</td>
+	</tr>
 </table>
