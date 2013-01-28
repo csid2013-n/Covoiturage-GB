@@ -14,8 +14,16 @@ public class Trajets extends Controller {
 		render(trajetsDisponibles);
     }
     
+    public static void mesTrajets(){
+    	Utilisateur u = Utilisateur.findById(2L);
+    	List<Trajet> trajetsDemandes = Trajet.find("byIsDispoAndPassager_id",false,u.id).fetch();
+		render(trajetsDemandes);  	
+    }
+    
     public static void demander(Long id){
+    	Utilisateur u = Utilisateur.findById(2L);
     	Trajet trajetReserve = Trajet.findById(id);
+    	trajetReserve.Passager = u;
     	trajetReserve.isDispo = false;
     	trajetReserve.save();
     	index();
