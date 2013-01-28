@@ -15,6 +15,7 @@
     	<td>${trajet.VilleDepart}</td>
     	<td>${trajet.VilleArrive}</td>
     	<td>${trajet.Conducteur.nom + " " +trajet.Conducteur.prenom}</td>
+    	<td><a href="@{Trajets.demander(trajet.id)}">Demander</a></td>
     </tr>
 #{/list}
 	<tr>
