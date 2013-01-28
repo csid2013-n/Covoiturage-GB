@@ -3,9 +3,9 @@
 # ~~~~
 
 # Home page
-GET     /                                       Trajets.index
+GET     /                                       Utilisateurs.Connexion
 
-GET     /Trajets                                Trajets.getAllTrajets
+GET     /Trajets                                Trajets.index
 GET     /MesTrajets                             Trajets.mesTrajets
 GET     /NouveauTrajet                                Trajets.addTrajet
 

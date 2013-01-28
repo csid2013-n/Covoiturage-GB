@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'Nouveau trajet' /}
+
+<h3>Ajouter un nouveau trajet</h3>
+#{form}
+<p>
+	<label for="VDepart">Ville Depart: </label>
+	<input type="text" name="t.VilleDepart" id="VDepart" />
+</p>
+<p>
+	<label for="VArrive">Ville Arriver:</label>
+	<input name="t.VilleArrive" id="VArrive" />
+</p>
+<p>
+	<label for="DTrajet">Date:</label>
+	<input name="t.dateDepart" id="DTrajet" />
+</p>
+<p>
+	<input type="submit" value="Ajouter votre trajet" />
+</p>
+#{/form}
