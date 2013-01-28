@@ -16,7 +16,8 @@ public class Trajets extends Controller {
     
     public static void mesTrajets(){
     	Utilisateur u = Utilisateur.findById(2L);
-    	List<Trajet> trajetsDemandes = Trajet.find("byIsDispoAndPassager_id",false,u.id).fetch();
+    	List<Trajet> trajetsDemandes = new ArrayList<Trajet>();
+    	trajetsDemandes = Trajet.find("byIsDispoAndPassager_id",false,u.id).fetch();
 		render(trajetsDemandes);  	
     }
     
