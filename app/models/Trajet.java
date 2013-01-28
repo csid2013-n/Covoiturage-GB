@@ -4,7 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import javax.validation.constraints.Null;
+
+import net.sf.oval.constraint.exclusion.Nullable;
 
 import play.db.jpa.Model;
 
@@ -20,7 +21,6 @@ public class Trajet extends Model{
 	public Utilisateur Conducteur;
 	
 	@ManyToOne
-	@Null
 	public Utilisateur Passager;
 	
 	public Trajet(String dateDepart, String VilleDepart, String VilleArrive, Utilisateur Conducteur, Utilisateur Passager, Boolean isDispo) {

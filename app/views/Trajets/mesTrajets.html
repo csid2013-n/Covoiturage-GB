@@ -1,7 +1,7 @@
 #{extends 'main.html' /}
-#{set title:'Liste des trajets' /}
+#{set title:'Mes trajets' /}
 
-<h1>Liste des trajets disponibles</h1>
+<h1>Mes trajets</h1>
 <table>
 	<tr>
 		<th>Date</th>
@@ -9,13 +9,12 @@
 		<th>Arriv&eacute;e</th>
 		<th>Conducteur</th>
 	</tr>
-#{list items:trajetsDisponibles, as:'trajet'}
+#{list items:trajetsDemandes, as:'trajet'}
     <tr>
     	<td>${trajet.dateDepart}</td>
     	<td>${trajet.VilleDepart}</td>
     	<td>${trajet.VilleArrive}</td>
     	<td>${trajet.Conducteur.nom + " " +trajet.Conducteur.prenom}</td>
-    	<td><a href="@{Trajets.demander(trajet.id)}">Demander</a></td>
     </tr>
 #{/list}
 	<tr>

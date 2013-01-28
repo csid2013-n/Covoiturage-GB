@@ -6,6 +6,7 @@
 GET     /                                       Trajets.index
 
 GET     /Trajets                                Trajets.getAllTrajets
+GET     /MesTrajets                             Trajets.getAllTrajets
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
