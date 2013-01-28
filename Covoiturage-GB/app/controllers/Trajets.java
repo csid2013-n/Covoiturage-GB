@@ -13,5 +13,9 @@ public class Trajets extends Controller {
 		List<Trajet> trajetsDisponibles = Trajet.findAll();
 		render(trajetsDisponibles);
     }
+    
+    public static void demander(Long id){
+    	
+    }
 
 }
