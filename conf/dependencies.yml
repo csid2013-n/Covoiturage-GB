@@ -2,4 +2,4 @@
 
 require:
     - play 1.2.5
-    - postgresql
+    - postgresql 9.0-801.jdbc4
