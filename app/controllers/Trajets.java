@@ -29,5 +29,16 @@ public class Trajets extends Controller {
     	trajetReserve.save();
     	index();
     }
+    
+    public static void ajouterTrajets(Trajet trajet){
+    	Utilisateur u = Utilisateur.findById(1L);
+    	trajet.Conducteur = u;
+    	trajet.save();
+    	index();
+    }
+    
+    public static void addTrajet(){
+    	render();
+    }
 
 }

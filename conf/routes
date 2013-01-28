@@ -6,7 +6,8 @@
 GET     /                                       Trajets.index
 
 GET     /Trajets                                Trajets.getAllTrajets
-GET     /MesTrajets                             Trajets.getAllTrajets
+GET     /MesTrajets                             Trajets.mesTrajets
+GET     /NouveauTrajet                                Trajets.addTrajet
 
 GET		/Utilisateurs/							Utilisateurs.index
 POST	/Utilisateurs/							Utilisateurs.Inscription

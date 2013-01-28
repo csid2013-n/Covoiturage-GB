@@ -2,21 +2,22 @@
 #{set title:'Mes trajets' /}
 
 <h1>Mes trajets</h1>
-<table>
+<table class="table">
 	<tr>
 		<th>Date</th>
 		<th>D&eacute;part</th>
 		<th>Arriv&eacute;e</th>
 		<th>Conducteur</th>
 	</tr>
-#{list items:trajetsDemandes, as:'trajet'}
-    <tr>
-    	<td>${trajet.dateDepart}</td>
-    	<td>${trajet.VilleDepart}</td>
-    	<td>${trajet.VilleArrive}</td>
-    	<td>${trajet.Conducteur.nom + " " +trajet.Conducteur.prenom}</td>
-    </tr>
-#{/list}
+		#{list items:trajetsDemandes, as:'trajet'}
+			
+		    <tr>
+		    	<td>${trajet.dateDepart}</td>
+		    	<td>${trajet.VilleDepart}</td>
+		    	<td>${trajet.VilleArrive}</td>
+		    	<td>${trajet.Conducteur.nom + " " +trajet.Conducteur.prenom}</td>
+		    </tr>
+		#{/list}
 	<tr>
 		<td colspan="3">Total = ${trajetsDisponibles.size}</td>
 	</tr>
