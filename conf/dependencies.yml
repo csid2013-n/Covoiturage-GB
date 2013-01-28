@@ -2,3 +2,4 @@
 
 require:
     - play
+    - postgresql 9.0-801.jdbc4
