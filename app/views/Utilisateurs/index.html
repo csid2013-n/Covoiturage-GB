@@ -1,0 +1,64 @@
+#{extends 'main.html' /}
+#{set title:'Accueil' /}
+
+<h1 style="text-align: center;">Co-Voiturage</h1>
+	<br />
+	
+<!-- 	#{form @Utilisateurs.connexion()}
+	<p id="emailConnect-field">
+			<label for="emailConnect">&{'secure.username'}</label>
+			<input type="text" name="emailConnect" id="emailConnect" value="${flash.emailConnect}" />
+		</p>
+		<p id="passwordConnect-field">
+			<label for="passwordConnect">&{'secure.password'}</label>
+			<input type="password" name="passwordConnect" id="passwordConnect" value="" />
+		</p>
+		<p id="signin-field">
+			<input type="submit" id="signin" value="&{'secure.signin'}" />
+		</p>     
+    #{/form}
+ -->			
+	
+<h3>Inscription</h3>
+ 
+ #{if flash.success}
+    <p class="success">${flash.success}</p>
+#{/if}
+
+#{form @Utilisateurs.Inscription()}
+	 #{ifErrors}
+    <p class="error">
+        ${errors[0]}
+    </p>
+	#{/ifErrors}
+	<p>
+        <label for="name">Nom :</label>
+        <input type="text" name="nom" id="nom" value="${params.nom}"/>
+    </p>
+	<p>
+        <label for="firstname">Pr&eacute;nom :</label>
+        <input type="text" name="prenom" id="prenom" value="${params.prenom}"/>
+    </p>
+	<p>
+        <label for="email">Email :</label>
+        <input type="text" name="email" id="email" value="${params.email}"/>
+    </p>
+	<p>
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" value="${params.password}"/>
+    </p>
+	<p>
+        <label for="confirmePassword">Confirmation mot de passe :</label>
+        <input type="password" name="confirmePassword" id="confirmePassword" value="${params.confirmePasword}"/>
+    </p>
+	<p>
+	    <label for="code">Veuillez entrer le code ci-dessous :</label><br />
+	    <img src="@{Utilisateurs.captcha(randomID)}" />
+	    <br />
+	    <input type="text" name="code" id="code" size="18" value="" />
+	    <input type="hidden" name="randomID" value="${randomID}" />
+	</p>
+	<p>
+	    <input type="submit" value="Inscription" />
+	</p>
+#{/form}

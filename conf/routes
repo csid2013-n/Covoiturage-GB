@@ -8,6 +8,9 @@ GET     /                                       Trajets.index
 GET     /Trajets                                Trajets.getAllTrajets
 GET     /MesTrajets                             Trajets.getAllTrajets
 
+GET		/Utilisateurs/							Utilisateurs.index
+POST	/Utilisateurs/							Utilisateurs.Inscription
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
