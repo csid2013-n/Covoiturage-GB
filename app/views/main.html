@@ -13,16 +13,24 @@
         #{get 'moreScripts' /}
     </head>
     <body>
+    	
     	 <div class="navbar">
 			 <div class="navbar-inner">
-			    <a class="brand" href="#">Title</a>
+			    <a class="brand" href="#">Co'Voiturage</a>
 			    <ul class="nav">
-			    <li class="active"><a href="#">Home</a></li>
-			    <li><a href="#">Link</a></li>
-			    <li><a href="#">Link</a></li>
+			    #{if session["user"] != null}
+			    <li><a href="@{Trajets.index()}">Trajets disponibles</a></li>
+			    <li><a href="@{Trajets.mesTrajets()}">Mes trajets</a></li>
+			    <li><a href="#">D&eacute;connexion</a></li>
+			    #{/if}
+			    #{else}
+			    <li><a href="@{Utilisateurs.Inscription()}">Inscription</a></li>
+			    <li><a href="@{Trajets.mesTrajets()}">Connexion</a></li>		    	
+			    #{/else}
 			    </ul>
 			    </div>
 		</div>
+		
         #{doLayout /}
     </body>
 </html>
